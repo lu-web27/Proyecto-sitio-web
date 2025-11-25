@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etech - Landing Page de E-Learning</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Industrial N°4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
+    <!-- Barra lateral / Menú hamburguesa -->
+    <div id="sidebar" class="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">×</div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Autoridades</a></li>
+            <li><a href="#">Reseña</a></li>
+            <li><a href="#">Fotos y Videos</a></li>
+            <li><a href="#">PAI</a></li>
+        </ul>
+    </div>
+
+    <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <div class="logo">Etech.</div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#courses">Cursos</a></li>
-                    <li><a href="#about">Acerca de</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
-            <button class="btn btn-login">Iniciar Sesión</button>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+
+        <div class="logo-area">
+            <!-- Si luego tenés la imagen, reemplazá el texto por <img src="logo-industrial.jpg"> -->
+            <span class="school-title">Industrial N°4</span>
         </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#institucion">Institución</a></li>
+                <li><a href="#vida">Vida Estudiantil</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Desarrolla tus habilidades de una manera nueva y única</h1>
-                <p>Explora un mundo de aprendizaje con nuestros cursos expertos.</p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary">Empezar Ahora</button>
-                    <button class="btn btn-secondary">Ver Demo</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="mujer-aprendiendo.png" alt="Mujer joven aprendiendo en laptop">
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos al Colegio Industrial N°4 “José Menéndez”</h1>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Novedades</a>
+                <a href="#" class="btn">Contacto</a>
             </div>
         </div>
     </section>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
 
     <section class="brand-logos">
         <div class="container">
